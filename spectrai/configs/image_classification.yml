@@ -1,0 +1,63 @@
+# Default image classification configuration
+
+Task_Options:
+  task: 'Classification'                      # deep learning task [Calibration/Classification/Denoising/Segmentation/Super-Resolution]
+  classes: 2                                  # no. classes for Classification or Segmentation, zero otherwise        
+
+Training_Options:
+  training_option: 'Train From Scratch'       # training option ['Apply Pre-Trained Network'/'Train From Scratch'/'Transfer Learning']
+  pretrained_network: 'None'                  # path to pretrained network, 'None' if training_option = 'Train From Scratch'
+  pretrained_classes: 0                       # no. classes for pretrained Classification or Segmentation model, zero otherwise
+
+Network_Hyperparameters:
+  network: ResNet                             # network architecture [UNet/ResUNet/ResNet/RCAN]
+  dimension: '2D'                             # convolution dimension for images ['2D'/'3D']
+  activation: ReLU                            # activation function [ReLU/LeakyReLU/PReLU]
+  normalization: 'BatchNorm'                       # normalization layer [None/BatchNorm/LayerNorm/InstanceNorm/GroupNorm]
+
+Training_Hyperparameters:
+  epochs: 1                                   # no. training epochs
+  batch_size: 2                               # batch size
+  learning_rate: 0.0001                       # learning rate
+  input_image_size: 16                        # input image size (only applies to Super-Resolution)
+  target_image_size: 64                       # target image size (only applies to images)
+  spectrum_length: 250                        # spectrum length
+  optimizer: Adam                             # optimizer [Adam/Adagrad/SGD/RMSprop]
+  scheduler: Constant                         # learning rate scheduler [Constant/Step/Multiplicative/Cyclic/OneCycle/ReduceOnPlateau]
+  criterion: 'Cross Entropy'                  # criterion [L1/'L2 / MSE'/'Cross Entropy'/'Binary Cross Entropy']
+
+Preprocessing:
+  spectral_crop_start: 100                    # start index for spectral crop window
+  spectral_crop_end: 350                      # end index for spectral crop window
+  background_subtraction: 'None'              # spectral background subtraction [None/'Automatic Least Squares'/'3rd Order Polynomial'/'5th Order Polynomial'/'Minimum Value Offset']
+  data_normalization: 'Max Value'             # spectral normalization [None/'Max Value'/'Area Under The Curve']
+
+Data_Augmentation:
+  horizontal_flip: 1                          # horizontal flip (images)
+  vertical_flip: 1                            # vertical flip (images)
+  rotation: 1                                 # rotation (images)
+  random_crop: 1                              # random crop (images)
+  spectral_shift: 0.1                         # spectral shift (spectra, images)
+  spectral_flip: 1                            # spectral flip (spectra, images)
+  spectral_background: 0                      # add spectral background signal (spectra, images)
+  mixup: 1                                    # mixup (spectra, images)
+
+DataManager_Options:
+  data_format: 'Image: H, W, C'               # data format ['Image: H, W, C'/'Image: C, H, W'/Spectra]
+  data_directory: 'True'                      # is data input a directory [True] or a file [False]
+  train_input_data: "test_images/"            # path to training input data ('None' if N/A)
+  val_input_data: 'None'                      # path to validation input data ('None' if N/A)
+  test_input_data: 'None'                     # path to testing input data ('None' if N/A)
+  train_target_data: 'None'                   # path to training target data ('None' if N/A)
+  val_target_data: 'None'                     # path to validation target data ('None' if N/A)
+  test_target_data: 'None'                    # path to testing target data ('None' if N/A)
+  shuffle: 'True'                             # shuffle data [True/False]
+  seed: 'None'                                # random seed for data shuffling [integer value or 'None']
+  train_split: 'None'                         # percentage of data used for training set [0.0 - 1.0 or 'None']
+  val_split: 'None'                           # percentage of data used for validation set [0.0 - 1.0 or 'None']
+  test_split: 'None'                          # percentage of data used for testing set [0.0 - 1.0 or 'None']
+
+State_Dicts:
+  net_state_dict: 'None'                        # network state dict (if pretrained_network != 'None')
+  optimizer_state_dict: 'None'                  # optimizer state dict (if pretrained_network != 'None')
+  scheduler_state_dict: 'None'                  # scheduler state dict (if pretrained_network != 'None')

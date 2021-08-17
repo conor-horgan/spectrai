@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+.DS_Store
+.coverage
+*.egg-info/
+*.egg
+
+# ignore all ..ipynb files
+*.ipynb
+
+# ignore all .pt files
+*.pt
+
+# ignore all files in the following directories
+.vscode/
+spectrai/saved_models/
+spectrai/apply_outputs/
+spectrai/tensorboard/
+tensorboard/
+/.ipynb_checkpoints
