@@ -134,6 +134,6 @@ spectrai was implemented and tested in MATLAB R2020b and Python 3.8.8 using PyTo
 spectrai has not yet been extensively tested in other environments (it's on our to do list).
 
 ## Citation
-If you find this code helpful in your work, please cite the following [paper](https://arxiv.org/):
+If you find this code helpful in your work, please cite the following [paper](https://arxiv.org/abs/2108.07595):
 
-[Conor C. Horgan](https://www.kcl.ac.uk/people/conor-horgan) and [Mads S. Bergholt](http://www.bergholtlab.com/), "spectrai: a deep learning framework for spectral data", arXiv 2021, [arXiv](https://arxiv.org/)
+[Conor C. Horgan](https://www.kcl.ac.uk/people/conor-horgan) and [Mads S. Bergholt](http://www.bergholtlab.com/), "spectrai: a deep learning framework for spectral data.", arXiv preprint [arXiv:2108.07595](https://arxiv.org/abs/2108.07595) (2021).
