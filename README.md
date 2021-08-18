@@ -17,26 +17,26 @@ Spectral acquisition and imaging play important roles across numerous fields suc
 
 We have thus developed spectrai, a deep learning framework designed specifically for spectral data. spectrai is built on the popular PyTorch library and includes baseline implementations of several networks for tasks including spectral calibration, spectral (image) classification, spectral denoising, spectral image segmentation, and spectral image super-resolution. In addition to a Python command line interface, spectrai provides a MATLAB graphical user interface (GUI) to guide non-expert users through deep learning training and inference procedures.
 
-![Figure_1](https://github.com/conor-horgan/spectrai/blob/e9ea07e33e88120d9a01a7643e01b9dd797456f5/figures/figure_1.png)
+![Figure_1](https://github.com/conor-horgan/spectrai/blob/main/figures/figure_1.png?raw=true)
 spectrai MATLAB GUI.
 
 ## Examples
 ### Spectral Image Segmentation
 We demonstrate spectral image segmentation using the recently developed AeroRIT hyperspectral image dataset ([dataset](https://github.com/aneesh3108/AeroRIT), [paper](https://arxiv.org/pdf/1912.08178.pdf)).
 
-![Figure_2](https://github.com/conor-horgan/spectrai/blob/e9ea07e33e88120d9a01a7643e01b9dd797456f5/figures/figure_2.png)
+![Figure_2](https://github.com/conor-horgan/spectrai/blob/main/figures/figure_2.png?raw=true)
 AeroRIT Hyperspectral Image Semantic Segmentation.
 
 ### Spectral Denoising
 We demonstrate spectral denoising using a dataset of Raman spectra of MDA-MB-231 human breast cancer cells ([dataset](), [paper](https://arxiv.org/abs/2009.13318)).
 
-![Figure_3](https://github.com/conor-horgan/spectrai/blob/e9ea07e33e88120d9a01a7643e01b9dd797456f5/figures/figure_3.png)
+![Figure_3](https://github.com/conor-horgan/spectrai/blob/main/figures/figure_3.png?raw=true)
 Raman Spectral Denoising.
 
 ### Spectral Image SuperResolution
 We demonstrate spectral image super-resolution using the HELICoiD dataset of intraoperative hyperspectral images of human brains ([dataset](https://hsibraindatabase.iuma.ulpgc.es/), [paper](https://doi.org/10.1109/ACCESS.2019.2904788)).
 
-![Figure_4](https://github.com/conor-horgan/spectrai/blob/e9ea07e33e88120d9a01a7643e01b9dd797456f5/figures/figure_4.png)
+![Figure_4](https://github.com/conor-horgan/spectrai/blob/main/figures/figure_4.png?raw=true)
 HELICoiD Hyperspectral Image 8x Spatial Super-Resolution.
 
 ## Installation
