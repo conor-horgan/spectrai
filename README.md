@@ -8,6 +8,8 @@ spectrai is an open-source deep learning framework designed to facilitate the tr
     - [Spectral Denoising](#spectral-denoising)
     - [Spectral Image SuperResolution](#spectral-image-superresolution)
 3. [Installation](#installation)
+    - [spectrai core](#spectrai-core)
+    - [spectrai + MATLAB GUI](#spectrai--matlab-gui)
 4. [Usage](#usage)
 5. [Environment](#environment)
 6. [Citation](#citation)
@@ -28,7 +30,7 @@ We demonstrate spectral image segmentation using the recently developed AeroRIT 
 AeroRIT Hyperspectral Image Semantic Segmentation.
 
 ### Spectral Denoising
-We demonstrate spectral denoising using a dataset of Raman spectra of MDA-MB-231 human breast cancer cells ([dataset](), [paper](https://arxiv.org/abs/2009.13318)).
+We demonstrate spectral denoising using a dataset of Raman spectra of MDA-MB-231 human breast cancer cells ([dataset](https://drive.google.com/drive/folders/1590Zqr56txK5_hVlrfe7oEIdcKoUTEIH?usp=sharing), [paper](https://arxiv.org/abs/2009.13318)).
 
 ![Figure_3](https://github.com/conor-horgan/spectrai/blob/main/figures/figure_3.png?raw=true)
 Raman Spectral Denoising.
@@ -41,10 +43,31 @@ HELICoiD Hyperspectral Image 8x Spatial Super-Resolution.
 
 ## Installation
 ### spectrai core
+#### <u> PyPI Installation </u>
 spectrai is hosted on the [Python Package Index (PyPI)](https://pypi.org/).
 The latest version of spectrai can be installed using:
 ```bash
-    >> pip install spectrai
+pip install spectrai
+```
+
+#### <u> GitHub Repo Installation </u>
+Alternatively, the spectrai GitHub repo can be cloned directly as follows:
+1. git clone [spectrai](https://github.com/conor-horgan/spectrai)
+
+```bash
+git clone git@github.com:conor-horgan/spectrai.git
+```
+
+2. cd to spectrai
+
+```bash
+cd spectrai
+```
+
+3. pip install spectrai
+
+```bash
+pip install -e .
 ```
 
 *__Note:__ this will not include the spectrai.mlapp MATLAB application
@@ -62,7 +85,7 @@ Note that we provide the spectrai MATLAB GUI as an editable MATLAB application (
     
 3. In MATLAB, type the following to confirm the settings for MATLAB's Python interpreter (see [here](https://uk.mathworks.com/help/matlab/ref/pyenv.html) for details):
     ```bash
-    >> pyenv
+    pyenv
     ```
 4. Download [spectrai](https://github.com/conor-horgan/spectrai). 
 5. In MATLAB, navigate the working directory to:
@@ -75,27 +98,27 @@ Note that we provide the spectrai MATLAB GUI as an editable MATLAB application (
 spectrai can be run from the command line by typing:
 
 1. To train a model from scratch:
-    ```bash
-    >> spectrai_train
-    ```
+```bash
+spectrai_train
+```
 2. To evaluate a pretrained model:
-    ```bash
-    >> spectrai_evaluate
-    ```
+```bash
+spectrai_evaluate
+```
 3. To apply a pretrained model to a dataset:
-    ```bash
-    >> spectrai_apply
-    ```
+```bash
+spectrai_apply
+```
 
 The above commands will operate on a default config file provided in spectrai/spectrai/configs. To apply spectrai to new data, spectrai settings can be assigned in one of two ways:
 1. By default, settings are determined from .yml config files. Default config files are stored in [spectrai/spectrai/configs](https://github.com/conor-horgan/spectrai/tree/main/spectrai/configs). Users can develop custom config files, save them in the configs folder, and then specify them using the --config commandline flag, e.g.:
-    ```bash
-    >> spectrai_train --config custom_config.yml --verbose
-    ```
+```bash
+spectrai_train --config custom_config.yml --verbose
+```
 2. Alternatively, users can start from a default config file and modify individual settings via the commandline as required, e.g.:
-    ```bash
-    >> spectrai_train --activation PReLU --batch_size 16 --data_normalization "Max Value"
-    ```
+```bash
+spectrai_train --activation PReLU --batch_size 16 --data_normalization "Max Value"
+```
 
 Suitable values for different parameters are listed in the default config files.
 
@@ -105,13 +128,13 @@ spectrai can alternatively be run from the MATLAB GUI. This GUI provides an easy
 To run spectrai from the MATLAB GUI:
 
 1. Open MATLAB and navigate the working directory to:
-    ```bash
-    ~/spectrai/spectrai
-    ```
+```bash
+~/spectrai/spectrai
+```
 2. Type:
-    ```bash
-    >> appdesigner
-    ```
+```bash
+appdesigner
+```
 3. Open spectrai.mlapp
 4. Click Run (green play button on top menu bar)
 5. Starting at Training/Inference do the following:
