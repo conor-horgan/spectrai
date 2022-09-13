@@ -4,16 +4,16 @@ with open('README.md', encoding='utf8') as readme_file:
     readme = readme_file.read()
 
 requirements = [
-    'numpy==1.20.3',
-    'scipy==1.6.3',
-    'torch>=1.7.1',
-    'torchvision>=0.8.1',
-    'tensorboard==2.5.0',
-    'pandas==1.2.4',
-    'scikit-learn==0.24.2',
-    'scikit-image==0.18.1',
-    'Pillow==8.2.0',
-    'PyYAML==5.4.1',
+    'numpy==1.23.3',
+    'scipy==1.9.1',
+    'torch>=1.11.0',
+    'torchvision>=0.12.0',
+    'tensorboard==2.10.0',
+    'pandas==1.4.4',
+    'scikit-learn==1.1.2',
+    'scikit-image==0.19.3',
+    'Pillow==9.2.0',
+    'PyYAML==6.0',
 ]
 
 setup(
