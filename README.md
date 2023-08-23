@@ -30,7 +30,7 @@ We demonstrate spectral image segmentation using the recently developed AeroRIT 
 AeroRIT Hyperspectral Image Semantic Segmentation.
 
 ### Spectral Denoising
-We demonstrate spectral denoising using a dataset of Raman spectra of MDA-MB-231 human breast cancer cells ([dataset](https://drive.google.com/drive/folders/1590Zqr56txK5_hVlrfe7oEIdcKoUTEIH?usp=sharing), [paper](https://arxiv.org/abs/2009.13318)).
+We demonstrate spectral denoising using a dataset of Raman spectra of MDA-MB-231 human breast cancer cells ([dataset](https://emckclac-my.sharepoint.com/:f:/g/personal/k1919691_kcl_ac_uk/EqZaY-_FrGdImybIGuMCvb8Bo_YD1Bc9ATBxbLxdDIv0RA?e=5:HhLp91&fromShare=true&at=9), [paper](https://doi.org/10.1021/acs.analchem.1c02178)).
 
 ![Figure_3](https://github.com/conor-horgan/spectrai/blob/main/figures/figure_3.png?raw=true)
 Raman Spectral Denoising.
